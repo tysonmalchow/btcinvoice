@@ -1,0 +1,26 @@
+{
+  "name": "btcinvoice",
+  "version": "0.0.1",
+  "description": "bitcoin invoice app for snapcard",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tysonmalchow/btcinvoice"
+  },
+  "author": "Tyson Malchow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tysonmalchow/btcinvoice/issues"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "homepage": "https://github.com/tysonmalchow/btcinvoice",
+  "dependencies": {
+    "express": "^4.7.4",
+    "logfmt": "^1.1.2"
+  }
+}
