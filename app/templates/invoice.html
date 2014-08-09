@@ -1,0 +1,24 @@
+<div class="invoiceHeader">Live Bitcoin Invoice For</div>
+<h2 class="cover-heading">{{title}}</h2>
+
+<div class="invoice">
+    <p class="address">
+        {{address}}
+    </p>
+
+    <div class="qr">
+        <qrcode error-correction-level="M"  data="{{address}}" size="200"></qrcode>
+    </div>
+
+    <div class="invoicePanel">
+        <div class="progress" style="position: relative; margin-bottom: 5px;">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{progressvalue}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progressvalue}}%;">
+
+            </div>
+            <div class="progress-text">{{progresstext}}</div>
+        </div>
+        <div class="status {{statusclass}}">
+           {{status}}
+        </div>
+    </div>
+</div>

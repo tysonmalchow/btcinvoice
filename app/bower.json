@@ -1,0 +1,15 @@
+{
+  "name": "btcinvoice",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.2.21",
+    "angular-route": "~1.2.21",
+    "angular-animate": "~1.2.21",
+    "jquery": "~2.1.1",
+    "bootstrap-css": "~3.2.0"
+  }
+}

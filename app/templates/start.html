@@ -1,0 +1,23 @@
+<form ng-submit="create()">
+    <h1 class="cover-heading">Get Some Coin</h1>
+    <p class="lead">
+        I will create a Bitcoin invoice for you if you tell me how much you want:
+    </p>
+    <p>
+    <div>
+        <div class="input-group input-group-lg">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    {{currentCurrency}} <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                    <li ng-repeat="currency in currencies"><a href="javascript:return;" ng-click="setCurrency(currency)">{{currency}}</a></li>
+                </ul>
+            </div>
+            <input type="text" ng-model="amount" class="form-control" ng-change="check()">
+        </div>
+    </div>
+    </p>
+    <p class="lead">
+        <button type="submit" class="btn btn-lg btn-default" ng-class="buttonClass">Create Invoice</button>
+    </p>
+</form>
