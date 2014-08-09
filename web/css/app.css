@@ -77,6 +77,17 @@ exchange-rate .updated {
     margin-bottom: 10px;
 }
 
+#overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.8;
+    filter: alpha(opacity=50);
+}
+
 p.address {
     font-family: "Courier New", Courier, monospace;
     font-size: .8em;
