@@ -6,6 +6,8 @@ btcinvoice
 specify in amount and the tool will create a wallet invoice which can be paid via bitcoin. the invoice will react in
 real time to payments over the bitcoin network.
 
+### [live version here](http://mysterious-tundra-5884.herokuapp.com/)
+
 #### technologies/projects used in this project:
 
 - angularjs
