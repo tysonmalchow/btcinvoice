@@ -51,8 +51,8 @@ services.factory('RPC', ['$http', function($http) {
             return get('/invoice/' + address + "?token=" + encodeURIComponent(token));
         },
 
-        getTicker: function() {
-            return get('/ticker');
+        getExchangeRate: function(currency) {
+            return get('/exchangerate/' + currency);
         },
 
         listenForUpdates: function(address, callback) {

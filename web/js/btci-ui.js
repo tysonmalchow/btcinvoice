@@ -106,9 +106,9 @@ coreui.controller('Invoice', ['$scope', 'RPC', '$routeParams',
 coreui.directive('exchangeRate', ['RPC' ,function(RPC) {
     var timer;
 
-    function updateElement(rate, updated) {
-        RPC.getTicker().success(function(ticker) {
-            rate.text('1 BTC = USD$' + ticker.ticker['USD']['last']);
+    function updateElement(rateElement, updated) {
+        RPC.getExchangeRate('USD').success(function(rate) {
+            rateElement.text('1 BTC = USD$' + rate.exchangeRate);
             updated.text('Last updated at ' + new Date());
         }).fail;
     }

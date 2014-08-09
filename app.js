@@ -22,9 +22,9 @@ express.get('/invoice/:address', function(req, res) {
         res.json(invoice);
     });
 });
-express.get('/ticker', function(req,res) {
-    BTCI.getTicker().done(function(ticker) {
-        res.json({ticker: ticker});
+express.get('/exchangerate/:currency', function(req,res) {
+    BTCI.getExchangeRate(req.params.currency).done(function(erate) {
+        res.json({exchangeRate: erate, currency: req.params.currency});
     });
 });
 express.post('/invoice', function(req, res) {
