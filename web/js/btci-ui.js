@@ -24,6 +24,9 @@ coreui.config(['$routeProvider',
             });
     }]);
 
+/**
+ * controller for the first page for creating the invoice
+ */
 coreui.controller('Start', ['$scope', '$location', 'RPC',
     function($scope, $location, RPC) {
 
@@ -40,6 +43,7 @@ coreui.controller('Start', ['$scope', '$location', 'RPC',
         };
 
         $scope.create = function() {
+            $scope.buttonClass = 'disabled busy';
             RPC.createInvoice($scope.amount, $scope.currentCurrency)
                 .success(function(invoice) {
                     $location.path('/invoice/' + invoice.address);
@@ -51,6 +55,9 @@ coreui.controller('Start', ['$scope', '$location', 'RPC',
         $scope.buttonClass = 'disabled';
     }]);
 
+/**
+ * controller for the invoice page for watching updates
+ */
 coreui.controller('Invoice', ['$scope', 'RPC', '$routeParams',
     function($scope, RPC, $routeParams) {
         var listenerBinding = null;
@@ -103,6 +110,9 @@ coreui.controller('Invoice', ['$scope', 'RPC', '$routeParams',
         });
     }]);
 
+/**
+ * a live updating exchange rate directive
+ */
 coreui.directive('exchangeRate', ['RPC' ,function(RPC) {
     var timer;
 

@@ -12,6 +12,9 @@ socket.on('update', function (data) {
     if(updateCallback) updateCallback();
 });
 
+/**
+ * provides server communication abilities to the angularjs web client
+ */
 services.factory('RPC', ['$http', function($http) {
 
     function post(url, entity) {
