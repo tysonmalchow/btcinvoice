@@ -24,6 +24,10 @@ exchange-rate .updated {
     color: #a0a0a0;
 }
 
+.footer {
+    font-size: .75em;
+}
+
 .invoice .unpaid {
     color: red;
 }

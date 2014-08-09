@@ -33,7 +33,7 @@ express.post('/invoice', function(req, res) {
         res.json(invoice);
     });
 });
-express.use(Express.static(__dirname + '/app'));
+express.use(Express.static(__dirname + '/web'));
 
 // tell clients to update their view whenever an interesting update happens
 socketIO.on('connection', function(socket) {
@@ -58,6 +58,4 @@ socketIO.on('connection', function(socket) {
 console.log("launching server");
 var port = Number(process.env.PORT || 5000);
 server.listen(port);
-//express.listen(port, function() {
-//    console.log("Listening on " + port);
-//});
+
