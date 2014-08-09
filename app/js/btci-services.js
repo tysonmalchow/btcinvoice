@@ -3,7 +3,9 @@
 var services = angular.module('services', []);
 
 var updateCallback;
-var socket = io.connect('http://localhost:5000');
+var connectto = location.hostname+(location.port ? ':'+location.port: '');
+console.log("connecting socket.io to ", connectto);
+var socket = io.connect(connectto);
 socket.on('update', function (data) {
     console.log("Got invoice update notification for address: ", data.address);
 
